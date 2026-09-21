@@ -10,7 +10,7 @@
 
 **A modern, responsive, recruiter-first portfolio website showcasing AI/ML projects, Python applications, certifications, and technical experience.**
 
-[🌟 View Live Site](https://madhurikatta07.vercel.app/) • [📄 Documentation](./docs/) • [📫 Contact Me](madhukatta0731@gmail.com)
+[🌟 View Live Site](https://madhurikatta07.vercel.app/) • [📄 Documentation](./docs/) • [📫 Contact Me](mailto:madhukatta0731@gmail.com)
 
 </div>
 
