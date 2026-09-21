@@ -10,7 +10,7 @@
 
 **A modern, responsive, recruiter-first portfolio website showcasing AI/ML projects, Python applications, certifications, and technical experience.**
 
-[🌟 View Live Demo](https://your-domain.com/) • [📄 Detailed Documentation](./docs/) • [📫 Contact Me](#-contact--connect)
+[🌟 View Live Site](https://madhurikatta07.vercel.app/) • [📄 Documentation](./docs/) • [📫 Contact Me](#-contact--connect)
 
 </div>
 
@@ -39,7 +39,7 @@ This project is the personal portfolio of **Madhuri Katta**, a final-year B.Tech
 | **Animations** | Framer Motion |
 | **Icons** | React Icons (`react-icons/fi`) |
 | **Email Service** | EmailJS Browser SDK |
-| **Deployment** | Vercel / Netlify |
+| **Deployment** | Vercel |
 
 ---
 
@@ -116,7 +116,7 @@ e:\madhu\
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/madhurikatta07/madhu-portfolio.git
+git clone https://github.com/madhurikatta07/madhu_portfolio.git
 cd madhu-portfolio
 ```
 
@@ -169,3 +169,4 @@ For deeper insight into the design decisions, wireframes, and career roadmap:
 <div align="center">
   <sub>Designed & Developed with ❤️ by Madhuri Katta. Built with React & Vite.</sub>
 </div>
+

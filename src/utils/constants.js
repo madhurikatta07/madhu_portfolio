@@ -6,6 +6,7 @@ export const PERSONAL_INFO = {
     name: "Madhuri Katta",
     title: "AI/ML Enthusiast | Python Developer",
     tagline: "Developing Practical Solutions with AI/ML & Python.",
+    website: "https://madhurikatta07.vercel.app",
     email: "madhukatta0731@gmail.com",
     github: "https://github.com/madhurikatta07",
     linkedin: "https://www.linkedin.com/in/madhurikatta07/",
