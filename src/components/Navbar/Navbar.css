@@ -1,0 +1,408 @@
+/* =========================================================
+   MADHURI KATTA PORTFOLIO
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(15, 23, 42, 0.7);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+
+    box-shadow:
+        0 0 20px rgba(37, 99, 235, 0.08),
+        0 0 30px rgba(6, 182, 212, 0.05);
+}
+
+/* =========================================================
+   NAVBAR CONTAINER
+   ========================================================= */
+
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+
+    height: 76px;
+
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.navbar-brand {
+    position: relative;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    color: #F8FAFC;
+
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #38BDF8;
+}
+
+/* Small glow underneath brand */
+
+.navbar-brand::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 22px;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #7C3AED,
+            #EC0AA8);
+
+    border-radius: 10px;
+
+    opacity: 0.9;
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+
+    gap: 26px;
+}
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.navbar-link {
+    position: relative;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #94A3B8;
+
+    padding: 8px 0;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #F8FAFC;
+}
+
+/* Active / hover underline */
+
+.navbar-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #7C3AED,
+            #EC0AA8);
+
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   RESUME CTA
+   ========================================================= */
+
+.navbar-resume {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 9px 17px;
+
+    border-radius: 8px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #F8FAFC;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #7C3AED);
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+
+    box-shadow:
+        0 0 18px rgba(37, 99, 235, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar-resume:hover {
+    color: #F8FAFC;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 0 25px rgba(37, 99, 235, 0.30),
+        0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.navbar-menu-button {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #1E293B;
+    border-radius: 8px;
+
+    background: rgba(15, 23, 42, 0.8);
+
+    color: #F8FAFC;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar-menu-button:hover {
+    color: #38BDF8;
+
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 18px rgba(37, 99, 235, 0.2);
+}
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+    display: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .navbar-links {
+        gap: 18px;
+    }
+
+    .navbar-link {
+        font-size: 13px;
+    }
+
+    .navbar-resume {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar-container {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    /* Hide desktop navigation */
+
+    .navbar-links {
+        display: none;
+    }
+
+    /* Show hamburger */
+
+    .navbar-menu-button {
+        display: flex;
+    }
+
+    /* Mobile menu */
+
+    .mobile-menu {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        padding: 0 20px;
+
+        max-height: 0;
+        overflow: hidden;
+
+        opacity: 0;
+
+        border-top: 1px solid transparent;
+
+        background: rgba(8, 11, 26, 0.95);
+
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+
+        transition:
+            max-height 0.3s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    .mobile-menu-open {
+        max-height: 500px;
+
+        padding-top: 14px;
+        padding-bottom: 18px;
+
+        opacity: 1;
+
+        border-top-color: #1E293B;
+    }
+
+    /* Mobile links */
+
+    .mobile-nav-link {
+        display: block;
+
+        padding: 12px 10px;
+
+        border-radius: 8px;
+
+        font-family: "Inter", sans-serif;
+
+        font-size: 15px;
+        font-weight: 500;
+
+        color: #94A3B8;
+
+        transition:
+            color 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .mobile-nav-link:hover {
+        color: #F8FAFC;
+
+        background: rgba(37, 99, 235, 0.08);
+    }
+
+    /* Mobile Resume */
+
+    .mobile-resume {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 10px;
+
+        padding: 12px;
+
+        border-radius: 8px;
+
+        font-family: "Inter", sans-serif;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        color: #F8FAFC;
+
+        background: linear-gradient(90deg,
+                #2563EB,
+                #7C3AED);
+
+        box-shadow:
+            0 0 20px rgba(37, 99, 235, 0.18);
+    }
+
+    .mobile-resume:hover {
+        color: #F8FAFC;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar-container {
+        padding: 0 16px;
+    }
+
+    .navbar-brand {
+        font-size: 22px;
+    }
+
+    .navbar-menu-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-menu {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

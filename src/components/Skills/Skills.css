@@ -1,0 +1,342 @@
+/* =========================================
+   SKILLS SECTION (ALTERNATE SECTION #080B1A)
+========================================= */
+
+.skills {
+    position: relative;
+    background: #080B1A;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SKILLS GRID
+========================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 48px;
+}
+
+
+/* =========================================
+   SKILL CARD
+========================================= */
+
+.skill-card {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    /* Internal spacing */
+    padding: 1.5rem;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(56, 189, 248, 0.35);
+
+    box-shadow:
+        0 10px 35px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.skill-card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.25rem;
+}
+
+
+/* =========================================
+   CATEGORY ICON
+========================================= */
+
+.skill-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #1E293B;
+
+    border-radius: 14px;
+
+    background: #080B1A;
+
+    font-size: 1.8rem;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.skill-card:hover .skill-icon {
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 20px rgba(37, 99, 235, 0.2);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TOP ACCENT
+========================================= */
+
+.skill-accent {
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 0.8rem;
+
+    color: #38BDF8;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   CATEGORY TITLE
+========================================= */
+
+.skill-category {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    color: #F8FAFC;
+
+    transition: color 0.3s ease;
+}
+
+
+.skill-card:hover .skill-category {
+    color: #38BDF8;
+}
+
+
+/* =========================================
+   SKILL LIST
+========================================= */
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    margin-top: 1.25rem;
+}
+
+
+/* =========================================
+   SKILL BADGE (JETBRAINS MONO 13-14px 500 #38BDF8)
+========================================= */
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+
+    max-width: 100%;
+    box-sizing: border-box;
+
+    padding: 0.5rem 0.75rem;
+
+    border: 1px solid #1E293B;
+    border-radius: 8px;
+
+    background: #080B1A;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #38BDF8;
+
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.skill-card:hover .skill-badge {
+    border-color: rgba(37, 99, 235, 0.5);
+}
+
+
+.skill-badge:hover {
+    color: #F8FAFC !important;
+
+    border-color: #2563EB;
+
+    background: rgba(37, 99, 235, 0.15);
+
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   BOTTOM ACCENT
+========================================= */
+
+.skill-bottom-accent {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #7C3AED,
+            #EC0AA8);
+
+    transition: width 0.5s ease;
+}
+
+
+.skill-card:hover .skill-bottom-accent {
+    width: 100%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .skills-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 1.25rem;
+
+        width: 100%;
+        box-sizing: border-box;
+
+        margin-top: 48px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+
+    .skills {
+        overflow-x: hidden;
+    }
+
+    .skills-grid {
+        margin-top: 35px;
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+        width: calc(100% - 2rem);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skill-card {
+        padding: 1.25rem;
+    }
+
+    .skill-category {
+        font-size: 1.15rem;
+    }
+
+    .skill-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 1.6rem;
+    }
+
+    .skill-list {
+        gap: 0.45rem;
+    }
+
+    .skill-badge {
+        font-size: 0.78rem;
+
+        padding: 0.45rem 0.65rem;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .skills-grid {
+        width: calc(100% - 1.5rem);
+    }
+
+    .skill-card {
+        padding: 1rem;
+    }
+
+    .skill-category {
+        font-size: 1.05rem;
+    }
+
+    .skill-badge {
+        font-size: 0.74rem;
+        padding: 0.4rem 0.55rem;
+    }
+}

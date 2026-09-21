@@ -1,0 +1,498 @@
+@import "tailwindcss";
+
+/* =========================================================
+   MADHURI KATTA PORTFOLIO
+   Global CSS — Dark AI Neon Theme
+   ========================================================= */
+
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
+
+:root {
+    /* ===== Background ===== */
+    --bg-main: #050816;
+    --bg-secondary: #080B1A;
+    --bg-card: #0F172A;
+
+    /* ===== Primary Technology ===== */
+    --primary-blue: #2563EB;
+    --cyan: #06B6D4;
+    --light-blue: #38BDF8;
+
+    /* ===== AI / Futuristic ===== */
+    --purple: #7C3AED;
+    --neon-magenta: #EC0AA8;
+    --pink-glow: #FF2BD6;
+
+    /* ===== Text ===== */
+    --text-main: #F8FAFC;
+    --text-body: #CBD5E1;
+    --text-muted: #94A3B8;
+
+    /* ===== UI ===== */
+    --border: #1E293B;
+    --hover-blue: #60A5FA;
+
+    /* ===== Typography ===== */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* ===== Signature Gradient ===== */
+    --signature-gradient: linear-gradient(90deg,
+            #2563EB,
+            #7C3AED,
+            #EC0AA8);
+
+    /* ===== Glows (Standardized) ===== */
+    --blue-glow: 0 0 30px rgba(37, 99, 235, 0.25);
+    --cyan-glow: 0 0 30px rgba(6, 182, 212, 0.20);
+    --magenta-glow: 0 0 30px rgba(236, 10, 168, 0.18);
+
+    /* ===== Layout ===== */
+    --container-width: 1200px;
+    --section-padding: 100px;
+    --section-padding-mobile: 70px;
+
+    /* ===== Border Radius ===== */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+}
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+
+    background: var(--bg-main);
+    color: var(--text-main);
+
+    font-family: var(--font-body);
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================================
+   3. TYPOGRAPHY (LOCKED TASK 6 HIERARCHY)
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+/* Hero Name: 56–64px desktop, 36–42px mobile, 700 */
+h1 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+/* Section Heading: 40–44px desktop, 30–34px mobile, 700 */
+h2 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+/* Subheading: 22–26px desktop, 20–22px mobile, 600 */
+h3 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Card Title: 20–22px desktop, 18–20px mobile, 600 */
+h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Body: 16–18px desktop, 15–16px mobile, 400 */
+p {
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Technical: JetBrains Mono (13–15px desktop, 12–14px mobile, 500) */
+code,
+pre,
+.mono {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* =========================================================
+   4. LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-blue);
+}
+
+/* =========================================================
+   5. BUTTONS (POPPINS PER TASK 6)
+   ========================================================= */
+
+button,
+.btn {
+    border: none;
+    font-family: var(--font-heading);
+    cursor: pointer;
+}
+
+/* =========================================================
+   6. IMAGES
+   ========================================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================================================
+   7. SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--primary-blue);
+    color: var(--text-main);
+}
+
+/* =========================================================
+   8. CONTAINER
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* =========================================================
+   9. SECTIONS (MAIN & ALTERNATING 70% DARK BACKGROUNDS)
+   ========================================================= */
+
+.section {
+    width: 100%;
+    padding: var(--section-padding) 24px;
+}
+
+/* Main Background: #050816 */
+.section-main {
+    background: var(--bg-main);
+}
+
+/* Secondary Background: #080B1A (Hero & alternate sections) */
+.section-alt {
+    background: var(--bg-secondary);
+}
+
+.section-container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   10. SECTION HEADER
+   ========================================================= */
+
+.section-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 16px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: var(--text-muted);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* =========================================================
+   11. GRADIENT TEXT
+   ========================================================= */
+
+.gradient-text {
+    background: var(--signature-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* =========================================================
+   12. CARDS
+   ========================================================= */
+
+.portfolio-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    border-color: var(--primary-blue);
+    box-shadow: var(--blue-glow);
+    transform: translateY(-4px);
+}
+
+/* =========================================================
+   13. GLOW UTILITIES
+   ========================================================= */
+
+.blue-glow {
+    box-shadow: var(--blue-glow);
+}
+
+.cyan-glow {
+    box-shadow: var(--cyan-glow);
+}
+
+.magenta-glow {
+    box-shadow: var(--magenta-glow);
+}
+
+/* =========================================================
+   14. TECHNICAL LABEL
+   ========================================================= */
+
+.tech-label {
+    color: var(--light-blue);
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   15. GRADIENT BORDER EFFECT
+   ========================================================= */
+
+.gradient-border {
+    position: relative;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+        var(--signature-gradient) border-box;
+    border-radius: var(--radius-lg);
+}
+
+/* =========================================================
+   16. PAGE BACKGROUND
+   ========================================================= */
+
+.page-background {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 10% 20%,
+            rgba(37, 99, 235, 0.08),
+            transparent 30%),
+        radial-gradient(circle at 90% 80%,
+            rgba(124, 58, 237, 0.08),
+            transparent 30%),
+        var(--bg-main);
+}
+
+/* =========================================================
+   17. DIVIDER
+   ========================================================= */
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+}
+
+/* =========================================================
+   18. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-blue);
+}
+
+/* =========================================================
+   19. FOCUS ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--light-blue);
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   20. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .section {
+        padding: 90px 24px;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+}
+
+/* =========================================================
+   21. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: var(--section-padding-mobile) 20px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+}
+
+/* =========================================================
+   22. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 60px 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .portfolio-card {
+        border-radius: 12px;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+   =======/     └── og-image.png================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
